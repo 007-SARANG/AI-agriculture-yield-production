@@ -2,7 +2,7 @@
 
 ## 📄 Project Overview
 
-This project leverages machine learning techniques to predict **Rice Yield (Kg/ha)** based on agricultural data such as year, area of cultivation, production, and state. It demonstrates the use of **EDA**, **outlier removal**, **data preprocessing**, **model training**, and **evaluation**.
+This project leverages machine learning techniques to predict **Rice Yield (Kg/ha)** using year, cultivation area, and state as candidate input features. It demonstrates the use of **EDA**, **outlier removal**, **data preprocessing**, **model training**, and **evaluation**.
 
 ---
 
@@ -30,13 +30,9 @@ This project leverages machine learning techniques to predict **Rice Yield (Kg/h
 
 ---
 
-## 📊 Model & Accuracy
+## Evaluation status
 
-- **Model Used**: Random Forest Regressor
-- **Train Accuracy**: ~99.2%
-- **Test Accuracy (R²)**: ~95.4%
-- **MAE**: ~107.5
-- **RMSE**: ~56287.4
+The README previously reported a 99.2% training score and a 95.4% test R². Those figures are withdrawn: the original model feature set included total production, which directly encodes yield together with area, and the outlier filtering was performed before the train/test split. The saved model and historical scores should not be treated as valid generalization results. The modeling notebook now excludes total production and uses repository-relative paths; rerun the preprocessing and evaluation with a split-first methodology before publishing replacement metrics.
 
 ---
 
@@ -59,16 +55,15 @@ This project leverages machine learning techniques to predict **Rice Yield (Kg/h
 ## 🚀 How to Run
 
 1. Clone the repository
-2. Install dependencies: `pip install -r requirements.txt`
+2. Install dependencies: `pip install -r Requirements.txt`
 3. Run notebooks in sequence: `01` to `04`
-4. Don't forget to star the repo 
+4. Rerun the preprocessing, training, and evaluation notebooks to create the model artifacts.
 
 ---
 
-## 🚑 Author
+## Attribution
 
-- **Name**: [Nupur Madaan]
-- **Internship Project**: AI in Agriculture — Yield Prediction
+This repository is a collaborative fork of [nupurmadaan04/AI-agriculture-yield-production](https://github.com/nupurmadaan04/AI-agriculture-yield-production). The upstream README credits Nupur Madaan and identifies this as an internship project.
 
 ---
 
